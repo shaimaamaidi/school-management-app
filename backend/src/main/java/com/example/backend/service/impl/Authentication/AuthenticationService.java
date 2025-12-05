@@ -33,7 +33,7 @@ public class AuthenticationService {
 
         var jwtToken=jwtService.generateToken(savedAdmin);
         var refreshToken=jwtService.generateRefreshToken(savedAdmin);
-        tokenService.saveUserToken(savedAdmin,jwtToken);
+        tokenService.saveAdminToken(savedAdmin,jwtToken);
 
         return AuthenticationResponse.builder()
                 .accessToken(jwtToken)
@@ -54,8 +54,8 @@ public class AuthenticationService {
 
         var jwtToken = jwtService.generateToken(user);
         var refreshToken = jwtService.generateRefreshToken(user);
-        tokenService.revokeAllUserTokens(user);
-        tokenService.saveUserToken(user, jwtToken);
+        tokenService.revokeAllAdminTokens(user);
+        tokenService.saveAdminToken(user, jwtToken);
         return AuthenticationResponse.builder()
                     .accessToken(jwtToken)
                     .refreshToken(refreshToken)
@@ -81,8 +81,8 @@ public class AuthenticationService {
 
         var accessToken=jwtService.generateToken(user);
         var newRefreshToken= jwtService.generateRefreshToken(user);
-        tokenService.revokeAllUserTokens(user);
-        tokenService.saveUserToken(user,accessToken);
+        tokenService.revokeAllAdminTokens(user);
+        tokenService.saveAdminToken(user,accessToken);
 
         return AuthenticationResponse.builder()
                 .accessToken(accessToken)
@@ -98,7 +98,7 @@ public class AuthenticationService {
         String jwt = authHeader.substring(7);
         var storedToken = tokenService.getByToken(jwt);
         if (storedToken != null) {
-            tokenService.revokeAllUserTokens(storedToken.getAdmin());
+            tokenService.revokeAllAdminTokens(storedToken.getAdmin());
             SecurityContextHolder.clearContext();
         }
     }
