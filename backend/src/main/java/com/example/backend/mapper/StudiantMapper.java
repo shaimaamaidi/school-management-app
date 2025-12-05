@@ -10,6 +10,7 @@ public class StudiantMapper {
 
     public static Studiant toEntity(StudiantDTO studiantDTO){
         Studiant studiant=new Studiant();
+        studiant.setId(studiantDTO.getId());
         studiant.setUsername(studiantDTO.getUsername());
         String level= studiantDTO.getLevel();
         if(level!=null && !level.isBlank()){
@@ -25,6 +26,7 @@ public class StudiantMapper {
     }
     public static  StudiantDTO toDTO(Studiant studiant){
         StudiantDTO studiantDTO=new StudiantDTO();
+        studiantDTO.setId(studiant.getId());
         studiantDTO.setUsername(studiant.getUsername());
         studiantDTO.setLevel(studiant.getLevel().toString());
         return studiantDTO;

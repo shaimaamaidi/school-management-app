@@ -1,6 +1,5 @@
 package com.example.backend.controller;
 
-import com.example.backend.dto.PageRequest;
 import com.example.backend.dto.StudiantDTO;
 import com.example.backend.service.impl.StudiantService;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +20,8 @@ public class StudiantController {
 	private final StudiantService studiantService;
 
 	@GetMapping
-	public ResponseEntity<Page<StudiantDTO>> getAllStudents(@RequestBody PageRequest pageRequest) {
-		return ResponseEntity.ok(studiantService.getAllStudiants(pageRequest.getPage(), pageRequest.getSize()));
+	public ResponseEntity<Page<StudiantDTO>> getAllStudents(@RequestParam int page, @RequestParam int size) {
+		return ResponseEntity.ok(studiantService.getAllStudiants(page, size));
 	}
 
 	@GetMapping("/{id}")
@@ -53,13 +52,13 @@ public class StudiantController {
 	}
 
 	@GetMapping("/search/{username}")
-	public ResponseEntity<Page<StudiantDTO>> searchStudents(@PathVariable String username,@RequestBody PageRequest pageRequest) {
-		return ResponseEntity.ok(studiantService.searchStudinatsById(username, pageRequest.getPage(), pageRequest.getSize()));
+	public ResponseEntity<Page<StudiantDTO>> searchStudents(@PathVariable String username,@RequestParam int page, @RequestParam int size) {
+		return ResponseEntity.ok(studiantService.searchStudinatsById(username, page, size));
 	}
 
 	@GetMapping("/filter/{level}")
-	public ResponseEntity<Page<StudiantDTO>> filterByLevel(@RequestParam String level,@RequestBody PageRequest pageRequest) {
-		return ResponseEntity.ok(studiantService.filterByLevel(level, pageRequest.getPage(), pageRequest.getSize()));
+	public ResponseEntity<Page<StudiantDTO>> filterByLevel(@RequestParam String level,@RequestParam int page, @RequestParam int size) {
+		return ResponseEntity.ok(studiantService.filterByLevel(level, page, size));
 	}
 
 	@PostMapping("/import")
