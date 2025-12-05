@@ -1,0 +1,39 @@
+2025-12-02T16:43:36.719+01:00  INFO 1640 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 1640 (C:\Users\hp\Desktop\projet web\backend\target\classes started by hp in C:\Users\hp\Desktop\projet web\backend)
+2025-12-02T16:43:36.722+01:00  INFO 1640 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T16:43:37.392+01:00  INFO 1640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-02T16:43:37.469+01:00  INFO 1640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 9 JPA repository interfaces.
+2025-12-02T16:43:38.111+01:00  INFO 1640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-02T16:43:38.120+01:00  INFO 1640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-02T16:43:38.120+01:00  INFO 1640 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-12-02T16:43:38.196+01:00  INFO 1640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-02T16:43:38.196+01:00  INFO 1640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2025-12-02T16:43:38.392+01:00  INFO 1640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-02T16:43:38.447+01:00  INFO 1640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.20.Final
+2025-12-02T16:43:38.451+01:00  INFO 1640 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-12-02T16:43:38.722+01:00  INFO 1640 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-02T16:43:38.758+01:00  INFO 1640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-02T16:43:39.127+01:00  INFO 1640 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9205c0a
+2025-12-02T16:43:39.129+01:00  INFO 1640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-02T16:43:39.177+01:00  WARN 1640 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02T16:43:39.178+01:00  WARN 1640 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-02T16:43:40.717+01:00  INFO 1640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-02T16:43:40.962+01:00  INFO 1640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T16:43:41.419+01:00  INFO 1640 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-02T16:43:42.549+01:00  WARN 1640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02T16:43:43.081+01:00  INFO 1640 --- [main] c.e.b.config.SecurityConfiguration       : 💡 SecurityFilterChain bean is being created!
+2025-12-02T16:43:43.145+01:00  INFO 1640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@808fa1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b52ce28, org.springframework.security.web.context.SecurityContextHolderFilter@30587737, org.springframework.security.web.header.HeaderWriterFilter@729feae8, org.springframework.web.filter.CorsFilter@5ec10ab1, org.springframework.security.web.authentication.logout.LogoutFilter@7335414e, com.example.backend.config.JWTAuthenticationFilter@55105271, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@377bc8da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7479b19a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6701fbf3, org.springframework.security.web.session.SessionManagementFilter@541c32de, org.springframework.security.web.access.ExceptionTranslationFilter@2a6f3ac7, org.springframework.security.web.access.intercept.AuthorizationFilter@250fc0d1]
+2025-12-02T16:43:43.596+01:00  INFO 1640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-02T16:43:43.600+01:00  INFO 1640 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-02T16:43:43.603+01:00  INFO 1640 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7bec83d5]]
+2025-12-02T16:43:43.603+01:00  INFO 1640 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-02T16:43:43.618+01:00  INFO 1640 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 7.461 seconds (process running for 7.838)
+2025-12-02T16:43:53.468+01:00  INFO 1640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-02T16:43:53.468+01:00  INFO 1640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-02T16:43:53.470+01:00  INFO 1640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-02T16:44:43.568+01:00  INFO 1640 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-02T16:46:46.425+01:00  INFO 1640 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-02T16:46:46.426+01:00  INFO 1640 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7bec83d5]]
+2025-12-02T16:46:46.426+01:00  INFO 1640 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-02T16:46:46.465+01:00  INFO 1640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T16:46:46.467+01:00  INFO 1640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-02T16:46:46.475+01:00  INFO 1640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
