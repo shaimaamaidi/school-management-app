@@ -1,0 +1,74 @@
+<div class="min-h-screen flex items-center justify-center p-16 relative bg-gradient-to-br from-white via-gray-100 to-white">
+  <!-- Background Blur -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute w-72 h-72 rounded-full bg-blue-900 blur-[6rem] top-20 right-20"></div>
+    <div class="absolute w-72 h-72 rounded-full bg-blue-800 blur-[6rem] bottom-20 left-20"></div>
+  </div>
+
+  <!-- Login Card -->
+  <div class="relative w-full max-w-md">
+    <div class="bg-white p-8 rounded-3xl shadow-[0_10px_25px_rgba(0,0,0,0.15)] relative z-10">
+      
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-2xl font-bold text-blue-900 mb-2">Connexion</h1>
+        <p class="text-gray-600">Enter your personal account</p>
+      </div>
+
+      <!-- Error -->
+      <div *ngIf="error" class="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded text-sm">
+        {{ error }}
+      </div>
+
+      <!-- Form -->
+      <form (ngSubmit)="handleSubmit()" #loginForm="ngForm" class="space-y-6">
+        <!-- Username -->
+        <div>
+          <label for="username" class="block font-semibold text-blue-900 mb-2">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            [(ngModel)]="username"
+            required
+            placeholder="username"
+            class="w-full p-3 border-2 border-gray-300 rounded-lg outline-none focus:border-yellow-400"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="password" class="block font-semibold text-blue-900 mb-2">Mot de passe</label>
+          <div class="relative">
+            <input
+              [type]="showPassword ? 'text' : 'password'"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+              placeholder="••••••••"
+              class="w-full p-3 border-2 border-gray-300 rounded-lg outline-none focus:border-yellow-400"
+            />
+            <button type="button" (click)="togglePassword()" class="absolute top-1/2 right-3 -translate-y-1/2 bg-transparent border-none cursor-pointer">
+              <img *ngIf="!showPassword" src="/eye.svg" alt="Show Password" />
+              <img *ngIf="showPassword" src="/eye-off.svg" alt="Hide Password" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full bg-blue-900 text-white py-3 text-lg font-bold rounded-lg hover:opacity-90 transition-opacity">
+          log in
+        </button>
+      </form>
+
+      <!-- Footer -->
+      <div class="mt-6 text-center">
+        <p class="text-gray-600">
+          Don't have an account?
+          <button type="button" (click)="handleNavClick()" class="ml-2 text-yellow-400 font-semibold underline">Create an account</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

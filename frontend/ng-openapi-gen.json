@@ -1,0 +1,11 @@
+{
+  "input": "./src/openapi/openapi.json",
+  "output": "./src/app/services",
+  "useClass": true,
+  "modelIndex": true,
+  "service": true,
+  "skipApiModule": false,
+  "fileNaming": "kebab-case",
+  "exportCore": false,
+  "generateCore": false
+}
