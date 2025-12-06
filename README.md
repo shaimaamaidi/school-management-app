@@ -164,7 +164,7 @@ school-management-app/
 ### Frontend
 - Angular 16+
 - TypeScript
-- Bootstrap
+- TailwindCSS
 - SweetAlert2
 - NGX-Toastr
 
